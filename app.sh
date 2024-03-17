@@ -9,7 +9,7 @@ main() {
     display_info
     display_config_menu
 
-    read -p "Masukkan pilihan (1/2): " config_choice
+    read -p "$(echo -e '\e[1;36mMasukkan pilihan (1/2): \e[0m')" config_choice
     case $config_choice in
         1)
             config_file="$HOME/.bashrc"
@@ -18,14 +18,14 @@ main() {
             config_file="$HOME/.bash_profile"
             ;;
         *)
-            echo "Pilihan tidak valid. Keluar."
+            echo "$(echo -e '\e[1;31mPilihan tidak valid. Keluar.\e[0m')"
             exit 1
             ;;
     esac
 
     display_max_watches_menu
 
-    read -p "Masukkan pilihan nilai batasan (1-4): " max_watches_choice
+    read -p "$(echo -e '\e[1;36mMasukkan pilihan nilai batasan (1-4): \e[0m')" max_watches_choice
     case $max_watches_choice in
         1)
             max_watches=524288
@@ -37,10 +37,10 @@ main() {
             max_watches=2097152
             ;;
         4)
-            read -p "Masukkan nilai batasan sendiri: " max_watches
+            read -p "$(echo -e '\e[1;36mMasukkan nilai batasan sendiri: \e[0m')" max_watches
             ;;
         *)
-            echo "Pilihan tidak valid. Keluar."
+            echo "$(echo -e '\e[1;31mPilihan tidak valid. Keluar.\e[0m')"
             exit 1
             ;;
     esac

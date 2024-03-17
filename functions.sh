@@ -15,7 +15,13 @@ set_max_user_watches() {
         return 1
     fi
 
-    echo "fs.inotify.max_user_watches=$max_watches" | tee -a "$config_file" >/dev/null
+    # Hapus baris yang sama jika sudah ada
+    sed -i "/fs.inotify.max_user_watches=/d" "$config_file"
+
+    # Tambahkan baris baru dengan format yang benar
+    echo "sysctl -w fs.inotify.max_user_watches=$max_watches" >> "$config_file"
+
+
     echo "Nilai fs.inotify.max_user_watches telah diatur ke $max_watches di $config_file."
 
     # Membuat perubahan berlaku dengan menjalankan source pada file konfigurasi yang dipilih
@@ -33,6 +39,5 @@ display_info() {
     echo "Setelah perubahan, skrip akan memuat kembali file konfigurasi untuk menerapkan perubahan."
     echo "Informasi lebih lanjut tentang fs.inotify.max_user_watches bisa ditemukan di:"
     echo "https://man7.org/linux/man-pages/man5/inotify.7.html"
-    echo ""
 }
 
