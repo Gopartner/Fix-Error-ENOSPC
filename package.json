@@ -1,0 +1,22 @@
+{
+  "name": "fix-error-enospc",
+  "version": "1.0.0",
+  "description": "Meningkatkan Batas Pengawas File System limit for number of file watchers reached",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Proses bosku\" && ./app.sh && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gopartner/Fix-Error-ENOSPC.git"
+  },
+  "keywords": [
+    "inotify_max"
+  ],
+  "author": "yudibilly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gopartner/Fix-Error-ENOSPC/issues"
+  },
+  "homepage": "https://github.com/Gopartner/Fix-Error-ENOSPC#readme"
+}
