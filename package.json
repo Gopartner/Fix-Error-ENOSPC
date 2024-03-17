@@ -4,7 +4,8 @@
   "description": "Meningkatkan Batas Pengawas File System limit for number of file watchers reached",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Proses bosku\" && ./app.sh && exit 1"
+    "build": "git add . && git commit -m \"komit dengan nom run build\" && git push",
+    "start": "./app.sh && exit 1"
   },
   "repository": {
     "type": "git",
