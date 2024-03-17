@@ -10,7 +10,7 @@ Untuk menggunakan program ini, Anda perlu menjalankannya di Termux. Berikut adal
 
 1. Pastikan Anda telah menginstal Termux di perangkat Android Anda.
 2. Clone repositori ini ke dalam perangkat Anda.
-```
+```bash
 https://github.com/Gopartner/Fix-Error-ENOSPC.git
 ```
 3. Buka aplikasi Termux dan arahkan ke direktori di mana Anda menyimpan file `app.sh`.
@@ -18,4 +18,6 @@ https://github.com/Gopartner/Fix-Error-ENOSPC.git
 
 ```bash
 chmod +x app.sh
-
+```
+```bash
+npm start
